@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAPPY BIRTHDAY ANH THƠ</title>
+    <style>
+    
+    .blink-button {
+  animation: blink 2.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blink-text {
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    .blink-button {
+       
+        position: absolute; /* Đặt vị trí tuyệt đối */
+  top: 45%; /* Di chuyển nút lên 50% độ cao của màn hình */
+  left: 50%; /* Di chuyển nút sang 50% độ rộng của màn hình */
+  transform: translate(-50%, -50%); /* Dịch chuyển nút lùi lại 50% độ rộng và 50% độ cao của chính nó */
+    background-color: #fbfbfb00; /* Màu nền */
+    border: none; /* Không có đường viền */
+    color: rgb(243, 143, 143); /* Màu chữ */
+    padding: 10px 50px; /* Kích thước nút */
+    text-align: center; /* Căn giữa nội dung */
+    text-decoration: none; /* Không có gạch chân */
+    display: inline-block; /* Hiển thị dạng khối */
+    font-size: 32px; /* Kích thước chữ */
+    margin: 6px 3px; /* Khoảng cách với phần tử khác */
+    cursor: pointer; /* Con trỏ chuột thành hình bàn tay */
+    border-radius: 35px; /* Bo tròn góc */
+    transition-duration: 0.5s; /* Thời gian chuyển đổi */
+    width: 700px;
+    box-shadow: 0 0 40px;
+    animation: blink 4s ease-in-out infinite; /* thêm hiệu ứng nhấp nháy */
+}
+html, body {             /* căn đều ảnh ra full màn hình*/
+  height: 101%; 
+  width: 100%; 
+  
+    
+
+  }
+
+button:hover {
+    background-color: #bbb7b70a; /* Màu nền khi di chuột vào */
+    color: rgba(255, 255, 255, 0); /* Màu chữ khi di chuột vào */
+}
+
+body { 
+  
+  background-image: url('anh/sinhnhat.jpg');
+            background-repeat: no-repeat;
+            background-position:  center center;
+            background-size: cover ;
+            display: flex;
+           
+            align-items: center ;
+          
+ 
+}
+h1 {
+  font-size: 55px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <button class="blink-button" onclick="openNewPage()">
+          <h1 class="blink-text">Này bạn nhấn vào đây ❤</h1>
+        </button>
+      </div>
+
+
+
+    <script>
+        function openNewPage() {
+            window.location.href = "audio.html"; // thay đổi đường dẫn của trang mới tại đây
+        }
+        </script>
+</body></html>

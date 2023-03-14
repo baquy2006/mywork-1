@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY ANH THƠ</title>
+    <style>
+         
+
+
+        html, body {             /* căn đều ảnh ra full màn hình*/
+  height: 100%; 
+  width: 100%;                    
+}
+
+        body{
+            background-image: url('anh/pink123.jpg');
+            background-repeat: repeat;
+            background-position: center   center;
+            background-size: cover;
+            display: flex;
+           
+            align-items: center ;
+            
+           
+        }
+        
+        
+        
+        @font-face {         /* phông chữ*/
+    font-family: 'abc';
+    src: url('font/DancingScript-VariableFont_wght.ttf');
+}
+.blink-text {
+  animation: blink 4s linear infinite;
+}
+
+@keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        30% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+        .fisrt-message{
+            font-family:'abc';
+            position: absolute;
+            top: 10px;
+            left: 30%;
+            font-size: 35px;
+            color:rgb(250, 249, 249);
+            margin-left: -100px;
+            margin-right: -100px;
+            max-width: 100%;
+           text-shadow: 0 0 10px  rgb(252, 2, 2) ;
+       
+                  
+        }
+        .text{
+            color: rgb(245, 120, 120) ;
+            font-size: 20px;
+            max-width: 1200px;
+            height: 40%;
+            margin-left: 10px;
+            margin-right: 18px;
+
+            
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <audio id="myAudio" >
+        <source src="voice/chúc Anh Thơ có một ngày sinh nhật thật .mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+
+
+    <audio autoplay loop>
+        <source src="nhac/sound1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    
+    <div class="fisrt-message"> 
+        <h1 class="blink-text">Hi ANH THƠ❤</h1>
+    </div>
+
+    <div id="text"  class="text" ></div>
+    <script>
+
+
+
+        
+		var message  = `Hôm nay là sinh nhật của cô gái teen xinh đẹp và tài năng - Anh Thơ! 
+        Chúc mừng sinh nhật em nhé!
+
+Một cô gái tuyệt vời như em đáng được chúc mừng sinh nhật với tình yêu và niềm vui. Mong rằng trong năm mới, em sẽ tiếp tục phát triển và trưởng thành hơn nữa, để có thể đạt được những giấc mơ của mình.
+
+Hãy cứ tiếp tục làm những điều mà em yêu thích và luôn tận dụng thời gian để học hỏi và phát triển bản thân. Tôi tin rằng em sẽ có một tương lai tuyệt vời.
+
+Chúc em có một ngày sinh nhật thật đặc biệt, vui vẻ và tràn đầy niềm hạnh phúc bên những người thân yêu. Chúc em mãi luôn xinh đẹp, tự tin và thành công trong cuộc sống.
+
+Chúc mừng sinh nhật Em!`; // chuỗi chữ cần xuất hiện
+
+		var i = 0; // biến lưu trữ số lượng ký tự được xuất hiện
+
+		function typeWriter() {
+			if (i < message.length) {
+				document.getElementById("text").innerHTML += message.charAt(i); // thêm ký tự mới vào div
+				i++;
+				setTimeout(typeWriter, 20); // đợi 100ms trước khi xuất hiện ký tự tiếp theo
+			}
+		}
+
+		typeWriter(); // gọi hàm để bắt đầu xuất hiện chữ
+	</script>
+    <script>
+        setTimeout(function(){
+          var audio = document.getElementById("myAudio");
+          audio.play();
+        }, 3000);
+      </script>
+</body>
+</html>
